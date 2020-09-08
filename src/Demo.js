@@ -1,37 +1,37 @@
 import Button from "@material-ui/core/Button";
-import Menu from "./CascadeMenu";
+import CascadeMenu from "./CascadeMenu";
 import React from "react";
 
 const menuitems = [
   {
     key: "international-1",
     caption: "Asian",
-    onClick: () => {alert()}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "international-2",
     caption: "Australasian",
-    onClick: () => {}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "international-3",
     caption: "European",
-    onClick: () => {}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "international-4",
     caption: "Latin",
-    onClick: () => {}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "international-5",
     caption: "South African",
-    onClick: () => {}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "international-6",
     caption: "United Kingdom",
-    onClick: () => {}
+    onClick: (event) => {alert(event.target.textContent)}
   },
   {
     key: "usa-key",
@@ -40,27 +40,27 @@ const menuitems = [
       {
         key: "usaChapter-1",
         caption: "North Central",
-        onClick: () => {}
+        onClick: (event) => {alert(event.target.textContent)}
       },
       {
         key: "usaChapter-2",
         caption: "North East",
-        onClick: () => {}
+        onClick: (event) => {alert(event.target.textContent)}
       },
       {
         key: "usaChapter-3",
         caption: "South Central",
-        onClick: () => {}
+        onClick: (event) => {alert(event.target.textContent)}
       },
       {
         key: "usaChapter-4",
         caption: "South East",
-        onClick: () => {}
+        onClick: (event) => {alert(event.target.textContent)}
       },
       {
         key: "usaChapter-5",
         caption: "Western",
-        onClick: () => {}
+        onClick: (event) => {alert(event.target.textContent)}
       }
     ]
   }
@@ -68,7 +68,7 @@ const menuitems = [
 
 export default class Demo extends React.Component {
   state = {
-    menuOpen: false,
+   // menuOpen: false,
     menuAnchorEl: null
   };
 
@@ -98,7 +98,7 @@ export default class Demo extends React.Component {
         >
           Chapters
         </Button>
-        <Menu
+        <CascadeMenu
           id="cascading-menu"
           autoFocused
           menuitems={menuitems}
